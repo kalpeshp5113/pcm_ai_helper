@@ -80,12 +80,7 @@ if mode == "Solve Question":
             else:
                 st.warning("Please enter a question")
 
-    # New Question button
-    # with col2:
-    #     if st.button("New Question")
-        
-    #            st.session_state.question=""
-    #            st.rerun()
+   
     with col2:
       if st.button("New Question"):
          try:
@@ -95,16 +90,7 @@ if mode == "Solve Question":
              # Display the error in the UI for debugging
             st.error(f"An error occurred: {e},please do manually")
 
-    # History
-    # st.subheader("Previous Questions")
-
-    # for item in st.session_state.history[::-1]:
-
-    #     st.write("**Question:**", item["question"])
-    #     st.write("**Solution Type:**", item["type"])
-    #     st.write("**Answer:**")
-    #     st.write(item["answer"])
-    #     st.write("---")
+    
     
                         
 
@@ -148,29 +134,7 @@ elif mode == "Practice Generator":
             "answer": questions
         })
 
-# ---------------- DISPLAY HISTORY ----------------
-# st.subheader("📜 History")
 
-# for item in st.session_state.history[::-1]:
-
-#     st.markdown(f"**Question:** {item['question']}")
-#     st.write(item["answer"])
-#     st.markdown("---")
-# History
-
-# st.subheader("Previous Questions")
-
-# for item in st.session_state.history[::-1]:
-
-#     st.write("**Question:**", item["question"])
-#     st.write("**Solution Type:**", item["type"])
-#     st.write("**Answer:**")
-#     st.write(item["answer"])
-#     st.write("---")
-
-# ---------------- CLEAR HISTORY ----------------
-# if st.button("Clear History"):
-#     st.session_state.history = []
 
 elif mode == "Concept Explainer":
 
@@ -279,29 +243,9 @@ elif mode=="AI Notes Generator":
 elif mode == "AI Quiz Mode":
 
     st.header("🎯 AI Quiz Generator")
-    # quiz_source = st.selectbox(
-    # "Quiz Source",
-    # ["From Topic", "From PDF", "From Image"]
-    # )
-
-
-    # subject_input = st.selectbox("Select Subject", ["Physics","Chemistry","Mathematics"])
-    # topic_input = st.text_input("Enter Topic")
-    # difficulty_input = st.selectbox("Select Difficulty", ["Easy","Medium","Hard"])
+    
     def quiz_main():
-        # if "quiz_questions" not in st.session_state:
-        #     st.session_state.quiz_questions = []
-
-        # if "answers" not in st.session_state:
-        #     st.session_state.answers = {}
-
-        # if st.button("Generate Quiz"):
-        #     with st.spinner("Generating Quiz..."):    
-        #         if topic_input.strip():
-        #             st.session_state.quiz_questions = generate_quiz(subject_input, topic_input, difficulty_input)
-        #             st.session_state.answers = {}
-        #         else:
-        #             st.warning("Please enter a topic")
+        
 
         if st.session_state.quiz_questions:
             for i, q in enumerate(st.session_state.quiz_questions, 1):
