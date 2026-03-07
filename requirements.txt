@@ -1,4 +1,30 @@
-streamlit 
-goggle.generativeai
-pypdf
-PIL
+# Web framework
+streamlit
+
+# Google Generative AI (Gemini)
+google-generativeai
+
+# PDF file handling
+PyPDF2
+
+# Image handling (for image-based notes or uploads)
+Pillow
+
+# Data handling
+pandas
+numpy
+
+# Natural language processing (for processing text from PDF or AI-generated notes)
+nltk
+
+# HTTP requests (optional, if any API calls besides Google Gemini)
+requests
+
+# OpenAI (optional, if you use any OpenAI calls)
+openai
+
+# File type detection (for uploaded files)
+python-magic
+
+# Optional: for any advanced math / AI calculations
+scipy
