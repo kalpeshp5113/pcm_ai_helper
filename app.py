@@ -110,6 +110,7 @@ elif mode == "Solve Image":
                     "question": "Image Question",
                     "answer": answer
                 })
+                st.write(answer)
 
 # ---------------- PRACTICE GENERATOR ----------------
 elif mode == "Practice Generator":
