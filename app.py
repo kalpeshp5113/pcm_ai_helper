@@ -14,7 +14,7 @@ from generate_image_quiz import generate_quiz_from_image
 from generate_plan import generate_study_plan
 
 try:
-   genai.configure(api_key==st.secrets["GEMINI_API_KEY"])
+   genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 except Exception as e:
       st.error(f"An error occurred: {e},Your's API key quota is reach the limit")
 model = genai.GenerativeModel("gemini-2.5-flash")
