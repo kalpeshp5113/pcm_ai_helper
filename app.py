@@ -125,7 +125,7 @@ elif mode == "Practice Generator":
     )
 
     if st.button("Generate Questions"):
-
+      with st.spinner("Generating..."):
         questions = generate_practice(subject, difficulty)
         st.markdown("Practice Questions")
         
