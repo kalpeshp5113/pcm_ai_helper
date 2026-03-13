@@ -127,13 +127,14 @@ elif mode == "Practice Generator":
     if st.button("Generate Questions"):
 
         questions = generate_practice(subject, difficulty)
-
+        st.markdown("Practice Questions")
+        
         st.session_state.history.append({
             "type": "practice",
             "question": f"{subject} - {difficulty}",
             "answer": questions
         })
-
+        st.write(question)
 
 
 elif mode == "Concept Explainer":
