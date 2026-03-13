@@ -134,7 +134,7 @@ elif mode == "Practice Generator":
             "question": f"{subject} - {difficulty}",
             "answer": questions
         })
-        st.write(question)
+        st.write(questions)
 
 
 elif mode == "Concept Explainer":
