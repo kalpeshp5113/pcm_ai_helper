@@ -17,11 +17,11 @@ import os
 load_dotenv()
 # api_key= os.getenv("API_KEY")
 try:
-<<<<<<< HEAD
+
    genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-=======
-  genai.configure(api_key= os.getenv("API_KEY"))
->>>>>>> 3111e13 (hide API key using .env)
+
+   genai.configure(api_key= os.getenv("API_KEY"))
+
 except Exception as e:
             st.error(f"An error occurred: {e},Your's API key quota is reach the limit")
 model = genai.GenerativeModel("gemini-2.5-flash")
@@ -135,21 +135,21 @@ elif mode == "Practice Generator":
     if st.button("Generate Questions"):
       with st.spinner("Generating..."):
         questions = generate_practice(subject, difficulty)
-<<<<<<< HEAD
+
         st.markdown("Practice Questions")
         
-=======
+
               
->>>>>>> 3111e13 (hide API key using .env)
+
         st.session_state.history.append({
             "type": "practice",
             "question": f"{subject} - {difficulty}",
             "answer": questions
         })
         st.write(questions)
-<<<<<<< HEAD
 
-=======
+
+
  
 # ---------------- DISPLAY HISTORY ----------------
 # st.subheader("📜 History")
@@ -174,7 +174,7 @@ elif mode == "Practice Generator":
 # ---------------- CLEAR HISTORY ----------------
 # if st.button("Clear History"):
 #     st.session_state.history = []
->>>>>>> 3111e13 (hide API key using .env)
+
 
 elif mode == "Concept Explainer":
 
