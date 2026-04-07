@@ -12,11 +12,18 @@ from generat_quiz import  generate_quiz
 from generate_pdf_quiz import generate_quiz_from_pdf
 from generate_image_quiz import generate_quiz_from_image
 from generate_plan import generate_study_plan
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
+# api_key= os.getenv("API_KEY")
 try:
+<<<<<<< HEAD
    genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+=======
+  genai.configure(api_key= os.getenv("API_KEY"))
+>>>>>>> 3111e13 (hide API key using .env)
 except Exception as e:
-      st.error(f"An error occurred: {e},Your's API key quota is reach the limit")
+            st.error(f"An error occurred: {e},Your's API key quota is reach the limit")
 model = genai.GenerativeModel("gemini-2.5-flash")
 st.title("🎓 PCM Smart Study AI")
 st.caption("Built by Kalpesh Pawar")
@@ -128,15 +135,46 @@ elif mode == "Practice Generator":
     if st.button("Generate Questions"):
       with st.spinner("Generating..."):
         questions = generate_practice(subject, difficulty)
+<<<<<<< HEAD
         st.markdown("Practice Questions")
         
+=======
+              
+>>>>>>> 3111e13 (hide API key using .env)
         st.session_state.history.append({
             "type": "practice",
             "question": f"{subject} - {difficulty}",
             "answer": questions
         })
         st.write(questions)
+<<<<<<< HEAD
 
+=======
+ 
+# ---------------- DISPLAY HISTORY ----------------
+# st.subheader("📜 History")
+
+# for item in st.session_state.history[::-1]:
+
+#     st.markdown(f"**Question:** {item['question']}")
+#     st.write(item["answer"])
+#     st.markdown("---")
+# History
+
+# st.subheader("Previous Questions")
+
+# for item in st.session_state.history[::-1]:
+
+#     st.write("**Question:**", item["question"])
+#     st.write("**Solution Type:**", item["type"])
+#     st.write("**Answer:**")
+#     st.write(item["answer"])
+#     st.write("---")
+
+# ---------------- CLEAR HISTORY ----------------
+# if st.button("Clear History"):
+#     st.session_state.history = []
+>>>>>>> 3111e13 (hide API key using .env)
 
 elif mode == "Concept Explainer":
 
