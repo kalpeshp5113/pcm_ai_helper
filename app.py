@@ -17,10 +17,9 @@ import os
 load_dotenv()
 # api_key= os.getenv("API_KEY")
 try:
+   api_key= os.getenv("API_KEY")  or st.secrets["API_KEY"]
 
-   genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-
-   genai.configure(api_key= os.getenv("API_KEY"))
+   genai.configure(api_key=api_key)
 
 except Exception as e:
             st.error(f"An error occurred: {e},Your's API key quota is reach the limit")
