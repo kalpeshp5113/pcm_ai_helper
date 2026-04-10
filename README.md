@@ -30,7 +30,7 @@ This project helps students solve questions, understand concepts, generate pract
 
 ## 🔗 GitHub Repository
 
-https://github.com/kalpesh5113/pcm_ai_helper
+https://github.com/kalpeshp5113/pcm_ai_helper
 
 ---
 
