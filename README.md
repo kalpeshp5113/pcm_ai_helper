@@ -38,7 +38,7 @@ https://github.com/kalpeshp5113/pcm_ai_helper
 
 ### 1. Clone Repository
 
-git clone https://github.com/kalpesh5113/pcm_ai_helper.git
+git clone https://github.com/kalpeshp5113/pcm_ai_helper.git
 
 ### 2. Go to Folder
 
