@@ -83,7 +83,7 @@ You can run locally using your own API key.
 Kalpesh Pawar  
 Python | AI | Student Developer  
 
-GitHub: https://github.com/kalpesh5113
+GitHub: https://github.com/kalpeshp5113
 
 ---
 
